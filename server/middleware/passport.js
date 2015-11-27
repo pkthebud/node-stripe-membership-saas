@@ -400,7 +400,7 @@ module.exports = function(passport){
 	    });
 	  }
 	));
-	
+}; 	
 	/**
 	 * Login Required middleware.
 	 */
@@ -423,4 +423,3 @@ module.exports = function(passport){
 	};
   
     
-};
