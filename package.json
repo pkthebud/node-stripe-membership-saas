@@ -56,7 +56,6 @@
     "passport-google-oauth": "^0.2.0",
     "passport-instagram": "^1.0.0",
     "passport-linkedin-oauth2": "^1.4.0",
-    "passport-local": "^1.0.0",
     "passport-oauth": "^1.0.0",
     "passport-twitter": "^1.0.3",
     "passport-local": "^1.0.0",

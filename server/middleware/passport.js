@@ -1,5 +1,18 @@
+var _ = require('lodash');
+var passport = require('passport');
+var InstagramStrategy = require('passport-instagram').Strategy;
 var LocalStrategy = require('passport-local').Strategy;
+var FacebookStrategy = require('passport-facebook').Strategy;
+var TwitterStrategy = require('passport-twitter').Strategy;
+var GitHubStrategy = require('passport-github').Strategy;
+var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+var LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
+var OAuthStrategy = require('passport-oauth').OAuthStrategy;
+var OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
+
+//var LocalStrategy = require('passport-local').Strategy;
 var User = require('../models/user');
+var secret = require('../config/secrets.js');
 
 module.exports = function(passport){
 
