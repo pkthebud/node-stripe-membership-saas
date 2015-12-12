@@ -47,6 +47,5 @@ exports.getProfile = function(req, res, next){
   if (errorFlash.length) {
     error = errorFlash[0];
   }
-  console.log(req.user);
   res.render(req.render, {user: req.user, form: form, error: error, plans: plans});
 };

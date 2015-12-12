@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>{% block title %}Dashboard Title{% endblock %}</title>
+    <title>{{saasMultipass}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -20,14 +20,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/dashboard">Node Stripe Membership App</a>
+          <a class="navbar-brand" href="/dashboard">{{saasMultipass}}</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li {%if path == '/dashboard'%}class="active"{%endif%}><a href="/dashboard">Home</a></li>
             <li {%if path == '/profile'%}class="active"{%endif%}><a href="/profile">Profile</a></li>
             <li {%if path == '/billing'%}class="active"{%endif%}><a href="/billing">Billing</a></li>
-            <li><a href="https://github.com/eddywashere/node-stripe-membership-saas">Fork Me</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/logout">Logout</a></li>
