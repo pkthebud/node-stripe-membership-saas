@@ -19,7 +19,7 @@
             <div class="radio">
               <label>
                 <input type="radio" {% if user.stripe.plan == loop.key %}checked{% endif %} name="plan" value="{{loop.key}}" data-toggle="radio">
-                <span>{{plan.name}} - ${{plan.price}}</span>
+                <span>${{plan.price.toFixed(2)}} - {{plan.name}} </span>
               </label>
             </div>
           {% endfor %}
