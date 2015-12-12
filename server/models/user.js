@@ -9,12 +9,12 @@ var userSchema = new mongoose.Schema({
   email: { type: String, unique: true, lowercase: true },
   password: String,
 
-  facebook: String,
-  twitter: String,
-  google: String,
-  github: String,
-  instagram: String,
-  linkedin: String,
+  facebook: { type: String, default: '' },
+  twitter: { type: String, default: '' },
+  google: { type: String, default: '' },
+  github: { type: String, default: '' },
+  instagram: { type: String, default: '' },
+  linkedin: { type: String, default: '' },
   tokens: Array,
 
   profile: {

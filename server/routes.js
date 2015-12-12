@@ -8,6 +8,7 @@ setRender = require('middleware-responder').setRender,
 setRedirect = require('middleware-responder').setRedirect,
 stripeEvents = require('./middleware/stripe-events'),
 secrets = require('./config/secrets');
+
 // controllers
 var users = require('./controllers/users-controller'),
 main = require('./controllers/main-controller'),
@@ -110,6 +111,15 @@ module.exports = function (app, passport) {
     setRedirect({auth: '/', success: '/'}),
     isAuthenticated,
     users.deleteAccount);
+
+app.get('/auth/github', passport.authenticate('github'));
+app.get('/auth/github/callback', 
+	passport.authenticate
+		('github', { failureRedirect: '/login' }), 
+			function(req, res) {
+  				res.redirect(req.session.returnTo || '/');
+			}
+	);
 
   // use this url to receive stripe webhook events
   app.post('/stripe/events',
